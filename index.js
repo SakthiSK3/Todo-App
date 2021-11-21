@@ -1,10 +1,10 @@
 const express =require ("express");
 const app=express();
 const mongoose =require('mongoose');
-const UsersRoute=require('./UsersRoute');
+const UsersRoute=require('./Server/UsersRoute');
 const morgan =require('morgan')
 const cors =require('cors'); 
-const PORT =Number(process.env.PORT || 8000)
+const PORT =Number(process.env.PORT || 5000)
 
 app.use(express.json()); 
 app.use(morgan('dev'));
