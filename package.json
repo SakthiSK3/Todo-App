@@ -1,5 +1,5 @@
 {
-  "name": "todo-app",
+  "name": "to-do-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,13 +35,9 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "build": "npm run build",
-    "install": "npm install",
-    "heroku-postbuild": "npm run install && npm run build",
-    "server": "nodemon server.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
-  },
+    "start": "node index.js",
+    "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
